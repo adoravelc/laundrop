@@ -24,6 +24,7 @@ return new class extends Migration {
             // Foreign Keys
             $table->foreign('users_idusers')->references('idusers')->on('users')->onDelete('cascade');
             $table->foreign('addresses_idaddresses')->references('idaddresses')->on('addresses')->onDelete('restrict');
+            $table->softDeletes();
         });
     }
 

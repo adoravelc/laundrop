@@ -21,6 +21,7 @@ return new class extends Migration {
             // Foreign Keys
             $table->foreign('orders_idorders')->references('idorders')->on('orders')->onDelete('cascade');
             $table->foreign('services_idservices')->references('idservices')->on('services')->onDelete('restrict');
+            $table->softDeletes();
         });
     }
 

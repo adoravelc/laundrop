@@ -19,6 +19,7 @@ return new class extends Migration {
 
             // Foreign Key
             $table->foreign('users_idusers')->references('idusers')->on('users')->onDelete('cascade');
+            $table->softDeletes();
         });
     }
 

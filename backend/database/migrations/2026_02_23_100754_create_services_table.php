@@ -20,6 +20,7 @@ return new class extends Migration {
             $table->integer('estimate_days');
             $table->tinyInteger('is_active')->default(1);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

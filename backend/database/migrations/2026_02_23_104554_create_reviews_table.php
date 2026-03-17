@@ -19,6 +19,7 @@ return new class extends Migration {
 
             // Foreign Key
             $table->foreign('orders_idorders')->references('idorders')->on('orders')->onDelete('cascade');
+            $table->softDeletes();
         });
     }
 

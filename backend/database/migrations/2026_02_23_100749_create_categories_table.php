@@ -14,6 +14,7 @@ return new class extends Migration {
             $table->id('idcategories');
             $table->string('name', 100);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
